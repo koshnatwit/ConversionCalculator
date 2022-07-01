@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        //test comment
         setContentView(R.layout.activity_main);
 
         Bitmap imageTime = BitmapFactory.decodeResource(getResources(), R.drawable.ic_time_foreground);
