@@ -34,9 +34,6 @@ public class GridItemAdapter extends ArrayAdapter<GridItem> {
         title = (TextView) view.findViewById(R.id.title);
         title.setText(item.title);
 
-        TextView date;
-        date = (TextView) view.findViewById(R.id.date);
-        date.setText(item.date);
 
         return view;
     }
