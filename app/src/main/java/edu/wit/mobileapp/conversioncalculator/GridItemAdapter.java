@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,17 +27,13 @@ public class GridItemAdapter extends ArrayAdapter<GridItem> {
 
         View view = mInflater.inflate(R.layout.grid_item, null);
 
-        ImageView image;
-        image = (ImageView) view.findViewById(R.id.image);
+        ImageButton image;
+        image = (ImageButton) view.findViewById(R.id.image);
         image.setImageBitmap(item.image);
 
         TextView title;
         title = (TextView) view.findViewById(R.id.title);
         title.setText(item.title);
-
-        TextView date;
-        date = (TextView) view.findViewById(R.id.date);
-        date.setText(item.date);
 
         return view;
     }
