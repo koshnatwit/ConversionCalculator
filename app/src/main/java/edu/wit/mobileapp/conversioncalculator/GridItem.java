@@ -5,5 +5,4 @@ import android.graphics.Bitmap;
 public class GridItem {
     public Bitmap image;
     public String title;
-    public String date;
 }
