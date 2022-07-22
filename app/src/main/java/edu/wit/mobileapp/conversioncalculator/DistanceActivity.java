@@ -16,7 +16,6 @@ public class DistanceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distance);
-        Bundle bundle = this.getIntent().getExtras();
         
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         
