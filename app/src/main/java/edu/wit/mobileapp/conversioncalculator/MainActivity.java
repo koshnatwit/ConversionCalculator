@@ -21,15 +21,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //test comment
-        setContentView(R.layout.activity_main);
 
-        Bitmap imageTime = BitmapFactory.decodeResource(getResources(), R.drawable.ic_time_foreground);
+        setContentView(R.layout.activity_main);
+        
+        // put icon Bitmaps for each image button here
+        //Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.cat);
 
         List<GridItem> list = new ArrayList<GridItem>();
 
         GridItem item1 = new GridItem();
-        item1.image = imageTime;
+        item1.image = null;
         item1.title = "Title-1";
         list.add(item1);
 
