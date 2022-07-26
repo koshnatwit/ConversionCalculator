@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">ConversionCalculator</string>
+    <string-array name="distance">
+        <item>m</item>
+        <item>cm</item>
+        <item>mm</item>
+        <item>ft</item>
+        <item>in</item>
+        <item>yd</item>
+        <item>mile</item>
+        <item>km</item>
+    </string-array>
+    
+    <string-array name="time">
+        <item>s</item>
+        <item>ms</item>
+        <item>min</item>
+        <item>hr</item>
+        <item>day</item>
+        <item>ly</item>
+    </string-array>
+
+    <string-array name="mass">
+        <item>kg</item>
+        <item>g</item>
+        <item>mg</item>
+        <item>lb</item>
+        <item>slug</item>
+        <item>tonne</item>
+        <item>ton</item>
+        <item>oz</item>
+    </string-array>
+
+    <string-array name="temp">
+        <item>F</item>
+        <item>C</item>
+        <item>K</item>
+    </string-array>
+
+    <string-array name="speed">
+        <item>m/s</item>
+        <item>km/s</item>
+        <item>kmh</item>
+        <item>mph</item>
+        <item>in/s</item>
+        <item>ft/s</item>
+    </string-array>
+
+    <string-array name="angle">
+        <item>deg</item>
+        <item>rad</item>
+    </string-array>
 </resources>
