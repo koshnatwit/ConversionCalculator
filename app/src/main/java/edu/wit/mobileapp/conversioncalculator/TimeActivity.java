@@ -26,7 +26,6 @@ public class TimeActivity extends AppCompatActivity {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.time, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        Log.v("myApp", "time clicked");
         spinnerTime1.setAdapter(adapter);
         spinnerTime2.setAdapter(adapter);
 
