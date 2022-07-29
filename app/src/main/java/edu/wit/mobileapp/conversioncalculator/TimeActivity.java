@@ -21,8 +21,8 @@ public class TimeActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Spinner spinnerDistance1 = findViewById(R.id.spinner_temp1);
-        Spinner spinnerDistance2 = findViewById(R.id.spinner_temp2);
+        Spinner spinnerDistance1 = findViewById(R.id.spinner_time1);
+        Spinner spinnerDistance2 = findViewById(R.id.spinner_time2);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.temp, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
