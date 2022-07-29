@@ -77,6 +77,31 @@ public class MainActivity extends AppCompatActivity {
                     intent.setClass(MainActivity.this, DistanceActivity.class);
                     startActivity(intent);
                 }
+                if (position == 1) {
+                    Log.v("myApp", "time clicked");
+                    intent.setClass(MainActivity.this, TimeActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 2) {
+                    Log.v("myApp", "mass clicked");
+                    intent.setClass(MainActivity.this, MassActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 3) {
+                    Log.v("myApp", "temp clicked");
+                    intent.setClass(MainActivity.this, TempActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 4) {
+                    Log.v("myApp", "velocity clicked");
+                    intent.setClass(MainActivity.this, SpeedActivity.class);
+                    startActivity(intent);
+                }
+                if (position == 5) {
+                    Log.v("myApp", "angle clicked");
+                    intent.setClass(MainActivity.this, AngleActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 

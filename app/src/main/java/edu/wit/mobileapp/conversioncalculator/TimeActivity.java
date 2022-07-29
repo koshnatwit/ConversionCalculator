@@ -21,14 +21,14 @@ public class TimeActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Spinner spinnerDistance1 = findViewById(R.id.spinner_temp1);
-        Spinner spinnerDistance2 = findViewById(R.id.spinner_temp2);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.temp, android.R.layout.simple_spinner_item);
+        Spinner spinnerTime1 = findViewById(R.id.spinner_time1);
+        Spinner spinnerTime2 = findViewById(R.id.spinner_time2);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.time, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        spinnerDistance1.setAdapter(adapter);
-        spinnerDistance2.setAdapter(adapter);
+        Log.v("myApp", "time clicked");
+        spinnerTime1.setAdapter(adapter);
+        spinnerTime2.setAdapter(adapter);
 
         EditText enterField = (EditText) findViewById(R.id.editTextNumberDecimal);
         TextView resultField = (TextView) findViewById(R.id.editTextNumberDecimal2);
