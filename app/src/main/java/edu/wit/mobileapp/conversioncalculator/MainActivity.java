@@ -2,10 +2,14 @@ package edu.wit.mobileapp.conversioncalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -24,38 +28,38 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.cat);
+        Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.time_icon);
 
         List<GridItem> list = new ArrayList<GridItem>();
 
         GridItem item1 = new GridItem();
-        item1.image = BitmapFactory.decodeResource(getResources(), R.drawable.ic_time_24);
-        item1.title = "Title-1";
+        item1.image = null;
+        item1.title = "Distance";
         list.add(item1);
 
         GridItem item2 = new GridItem();
-        item2.image = null;
-        item2.title = "Title-2";
+        item2.image = imgTime;
+        item2.title = "Time";
         list.add(item2);
 
         GridItem item3 = new GridItem();
         item3.image = null;
-        item3.title = "Title-3";
+        item3.title = "Mass";
         list.add(item3);
 
         GridItem item4 = new GridItem();
         item4.image = null;
-        item4.title = "Title-4";
+        item4.title = "Temperature";
         list.add(item4);
 
         GridItem item5 = new GridItem();
         item5.image = null;
-        item5.title = "Title-5";
+        item5.title = "Velocity";
         list.add(item5);
 
         GridItem item6 = new GridItem();
         item6.image = null;
-        item6.title = "Title-6";
+        item6.title = "Angle";
         list.add(item6);
 
         GridItemAdapter adapter;
@@ -63,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
 
         GridView gridview = (GridView) findViewById(R.id.GridView01);
         gridview.setAdapter(adapter);
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent();
+                if (position == 0) {
+                    Log.v("myApp", "distance clicked");
+                    intent.setClass(MainActivity.this, DistanceActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
 
     }
 }

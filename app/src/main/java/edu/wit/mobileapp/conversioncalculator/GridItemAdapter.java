@@ -27,8 +27,8 @@ public class GridItemAdapter extends ArrayAdapter<GridItem> {
 
         View view = mInflater.inflate(R.layout.grid_item, null);
 
-        ImageButton image;
-        image = (ImageButton) view.findViewById(R.id.image);
+        ImageView image;
+        image = (ImageView) view.findViewById(R.id.image);
         image.setImageBitmap(item.image);
 
         TextView title;
