@@ -15,9 +15,6 @@ import android.widget.GridView;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class MainActivity extends AppCompatActivity {
 
     private static String TAG = "myApp";
@@ -29,11 +26,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.time_icon);
+        Bitmap imgDist = BitmapFactory.decodeResource(getResources(), R.drawable.distance_icon);
+        Bitmap imgMass = BitmapFactory.decodeResource(getResources(), R.drawable.mass_icon);
+        Bitmap imgTemp = BitmapFactory.decodeResource(getResources(), R.drawable.temp_icon);
+        Bitmap imgSpeed = BitmapFactory.decodeResource(getResources(), R.drawable.speed_icon);
+        Bitmap imgAngle = BitmapFactory.decodeResource(getResources(), R.drawable.angle_icon);
 
         List<GridItem> list = new ArrayList<GridItem>();
 
         GridItem item1 = new GridItem();
-        item1.image = null;
+        item1.image = imgDist;
         item1.title = "Distance";
         list.add(item1);
 
@@ -43,22 +45,22 @@ public class MainActivity extends AppCompatActivity {
         list.add(item2);
 
         GridItem item3 = new GridItem();
-        item3.image = null;
+        item3.image = imgMass;
         item3.title = "Mass";
         list.add(item3);
 
         GridItem item4 = new GridItem();
-        item4.image = null;
+        item4.image = imgTemp;
         item4.title = "Temperature";
         list.add(item4);
 
         GridItem item5 = new GridItem();
-        item5.image = null;
+        item5.image = imgSpeed;
         item5.title = "Velocity";
         list.add(item5);
 
         GridItem item6 = new GridItem();
-        item6.image = null;
+        item6.image = imgAngle;
         item6.title = "Angle";
         list.add(item6);
 
