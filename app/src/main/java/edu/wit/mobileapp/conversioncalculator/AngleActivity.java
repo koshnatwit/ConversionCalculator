@@ -59,7 +59,7 @@ public class AngleActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double value = Integer.parseInt(enterField.getText().toString());
+                double value = Double.parseDouble(enterField.getText().toString());
                 String firstUnit = spinnerAngle2.getSelectedItem().toString();
                 String secondUnit = spinnerAngle1.getSelectedItem().toString();
 
