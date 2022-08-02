@@ -47,6 +47,16 @@ public class DistanceActivity extends AppCompatActivity {
             }
         });
 
+         ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
+        switchUnit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int spinner1Index = spinnerDistance1.getSelectedItemPosition();
+                spinnerDistance1.setSelection(spinnerDistance2.getSelectedItemPosition());
+                spinnerDistance2.setSelection(spinner1Index);
+            }
+        });
+        
         Button submit = (Button) findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
