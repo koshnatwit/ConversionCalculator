@@ -4,20 +4,19 @@
         <item>m</item>
         <item>cm</item>
         <item>mm</item>
+        <item>km</item>
         <item>ft</item>
         <item>in</item>
         <item>yd</item>
         <item>mile</item>
-        <item>km</item>
     </string-array>
-
+    
     <string-array name="time">
         <item>s</item>
         <item>ms</item>
         <item>min</item>
         <item>hr</item>
         <item>day</item>
-        <item>ly</item>
     </string-array>
 
     <string-array name="mass">
