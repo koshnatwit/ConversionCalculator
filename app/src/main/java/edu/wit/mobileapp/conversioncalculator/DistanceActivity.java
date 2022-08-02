@@ -33,7 +33,7 @@ public class DistanceActivity extends AppCompatActivity {
         spinnerDistance2.setAdapter(adapter);
 
         EditText enterField = (EditText) findViewById(R.id.editTextNumberDecimal);
-        TextView resultField = (TextView) findViewById(R.id.result);
+        TextView resultField = (TextView) findViewById(R.id.editTextNumberDecimal2);
 
         DecimalFormat decimalFormat = new DecimalFormat("0.0000");
 
