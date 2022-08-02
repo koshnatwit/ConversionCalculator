@@ -1,5 +1,6 @@
 package edu.wit.mobileapp.conversioncalculator;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -7,10 +8,15 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +113,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        /*
+        BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.NavigationView);
+        bnv.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                Intent intent = new Intent();
+                switch (item.getItemId()) {
+                    case R.id.favorites :
+                        intent.setClass(MainActivity.this, FavoritesActivity.class); // rename class to whatever we name it
+                        startActivity(intent);
+                        return true;
+                    case R.id.settings :
+                        intent.setClass(MainActivity.this, SettingsActivity.class); // rename class to whatever we name it
+                        startActivity(intent);
+                        return true;
+                }
+                return false;
+            }
+        });
+        */
     }
 }

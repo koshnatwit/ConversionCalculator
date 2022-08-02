@@ -45,11 +45,13 @@ public class AngleActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton swap = (ImageButton)findViewById(R.id.imageView);
-        swap.setOnClickListener(new View.OnClickListener() {
+        ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
+        switchUnit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // figure out how to swap spinner objects
+                int spinner1Index = spinnerAngle1.getSelectedItemPosition();
+                spinnerAngle1.setSelection(spinnerAngle2.getSelectedItemPosition());
+                spinnerAngle2.setSelection(spinner1Index);
             }
         });
 

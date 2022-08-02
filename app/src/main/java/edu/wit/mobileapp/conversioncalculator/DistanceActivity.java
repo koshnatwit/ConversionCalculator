@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -47,7 +48,7 @@ public class DistanceActivity extends AppCompatActivity {
             }
         });
 
-         ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
+        ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
         switchUnit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,9 +62,9 @@ public class DistanceActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Spinner initialUnit = (Spinner) findViewById(R.id.spinner_dist1);
+                Spinner initialUnit = (Spinner) findViewById(R.id.spinner_dist2);
                 String unitData1 = initialUnit.getSelectedItem().toString();
-                Spinner finalUnit = (Spinner) findViewById(R.id.spinner_dist2);
+                Spinner finalUnit = (Spinner) findViewById(R.id.spinner_dist1);
                 String unitData2 = finalUnit.getSelectedItem().toString();
 
                 EditText getNum = (EditText) findViewById(R.id.editTextNumberDecimal);

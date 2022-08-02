@@ -30,5 +30,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        app:backgroundTint="@color/purple_500"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
 </GridLayout>

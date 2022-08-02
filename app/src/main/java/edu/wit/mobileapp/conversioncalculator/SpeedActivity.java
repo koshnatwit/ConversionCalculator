@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -41,6 +42,16 @@ public class SpeedActivity extends AppCompatActivity {
             public void onClick(View v){
                 enterField.setText("");
                 resultField.setText("");
+            }
+        });
+
+        ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
+        switchUnit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int spinner1Index = spinnerSpeed1.getSelectedItemPosition();
+                spinnerSpeed1.setSelection(spinnerSpeed2.getSelectedItemPosition());
+                spinnerSpeed2.setSelection(spinner1Index);
             }
         });
 
