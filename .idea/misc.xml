@@ -18,7 +18,12 @@
         <entry key="..\:/Users/koshn/AndroidStudioProjects/ConversionCalculator/app/src/main/res/layout/bottom_nav_menu.xml" value="0.45692883895131087" />
         <entry key="..\:/Users/koshn/AndroidStudioProjects/ConversionCalculator/app/src/main/res/layout/grid_item.xml" value="0.253125" />
         <entry key="..\:/Users/koshn/AndroidStudioProjects/ConversionCalculator/app/src/main/res/menu/bottom_nav_menu.xml" value="0.253125" />
+        <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_angle.xml" value="0.22395833333333334" />
         <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_distance.xml" value="0.268" />
+        <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_mass.xml" value="0.22395833333333334" />
+        <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_speed.xml" value="0.22395833333333334" />
+        <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_temp.xml" value="0.22395833333333334" />
+        <entry key="..\:/android/repository/ConversionCalculator/app/src/main/res/layout/activity_time.xml" value="0.22395833333333334" />
       </map>
     </option>
   </component>
