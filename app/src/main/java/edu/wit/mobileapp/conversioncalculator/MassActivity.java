@@ -77,8 +77,9 @@ public class MassActivity extends AppCompatActivity {
                 String stringNum = getNum.getText().toString();
                 double convertNum = Double.parseDouble(stringNum);
                 double convertedNum = 0;
-
-                if(unitData1.equals("kg")){
+                if (unitData1.equals(unitData2)){
+                    convertedNum = convertNum;
+                } else if(unitData1.equals("kg")){
                     switch (unitData2) {
                         case "g":
                             convertedNum = convertNum * 1000;
