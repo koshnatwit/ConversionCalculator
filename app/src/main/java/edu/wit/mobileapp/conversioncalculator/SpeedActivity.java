@@ -1,5 +1,6 @@
 package edu.wit.mobileapp.conversioncalculator;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,7 +23,9 @@ public class SpeedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_speed);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Velocity");
 
         Spinner spinnerSpeed1 = findViewById(R.id.spinner_speed1);
         Spinner spinnerSpeed2 = findViewById(R.id.spinner_speed2);

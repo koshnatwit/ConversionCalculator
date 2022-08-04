@@ -1,5 +1,6 @@
 package edu.wit.mobileapp.conversioncalculator;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -19,7 +20,9 @@ public class MassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mass);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Mass");
 
         Spinner spinnerDistance1 = findViewById(R.id.spinner_mass1);
         Spinner spinnerDistance2 = findViewById(R.id.spinner_mass2);

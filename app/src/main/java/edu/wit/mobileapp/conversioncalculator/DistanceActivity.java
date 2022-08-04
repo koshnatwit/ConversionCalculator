@@ -1,5 +1,6 @@
 package edu.wit.mobileapp.conversioncalculator;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -22,7 +23,9 @@ public class DistanceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_distance);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle("Distance");
 
         Spinner spinnerDistance1 = findViewById(R.id.spinner_dist1);
         Spinner spinnerDistance2 = findViewById(R.id.spinner_dist2);
