@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -53,6 +55,11 @@ public class TempActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(enterField.getText().toString())) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "No Value Entered", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
                 double value = Double.parseDouble(enterField.getText().toString());
                 String firstUnit = spinnerTemp2.getSelectedItem().toString();
                 String secondUnit = spinnerTemp1.getSelectedItem().toString();

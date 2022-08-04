@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.time_icon);
+        Bitmap imgTime = BitmapFactory.decodeResource(getResources(), R.drawable.time_icon_final);
         Bitmap imgDist = BitmapFactory.decodeResource(getResources(), R.drawable.distance_icon);
         Bitmap imgMass = BitmapFactory.decodeResource(getResources(), R.drawable.mass_icon);
         Bitmap imgTemp = BitmapFactory.decodeResource(getResources(), R.drawable.temp_icon);
