@@ -47,7 +47,7 @@ public class SpeedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 enterField.setText("");
-                resultField.setText("");
+                resultField.setText("Result");
             }
         });
 
