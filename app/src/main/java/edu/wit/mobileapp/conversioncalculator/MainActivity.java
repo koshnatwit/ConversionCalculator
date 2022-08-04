@@ -113,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // This is a test message from Thomas
+
         /*
         BottomNavigationView bnv = (BottomNavigationView) findViewById(R.id.NavigationView);
         bnv.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
