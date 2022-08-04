@@ -45,7 +45,7 @@ public class TempActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 enterField.setText("");
-                resultField.setText("");
+                resultField.setText("Result");
             }
         });
 

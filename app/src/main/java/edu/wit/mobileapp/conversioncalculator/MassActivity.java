@@ -48,7 +48,7 @@ public class MassActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 enterField.setText("");
-                resultField.setText("");
+                resultField.setText("Result");
             }
         });
         Log.v("my app", "before");
