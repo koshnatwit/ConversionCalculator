@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -20,7 +22,6 @@ public class MassActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Log.v("my app", "start");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mass);
 
@@ -51,12 +52,10 @@ public class MassActivity extends AppCompatActivity {
                 resultField.setText("Result");
             }
         });
-        Log.v("my app", "before");
         ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch);
         switchUnit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.v("my app", "in on click");
                 int spinner1Index = spinnerMass1.getSelectedItemPosition();
                 spinnerMass1.setSelection(spinnerMass2.getSelectedItemPosition());
                 spinnerMass2.setSelection(spinner1Index);
@@ -68,6 +67,11 @@ public class MassActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (TextUtils.isEmpty(enterField.getText().toString())) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "No Value Entered", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
                 Spinner initialUnit = (Spinner) findViewById(R.id.spinner_mass2);
                 String unitData1 = initialUnit.getSelectedItem().toString();
                 Spinner finalUnit = (Spinner) findViewById(R.id.spinner_mass1);
