@@ -63,13 +63,15 @@ public class TempActivity extends AppCompatActivity {
                 double value = Double.parseDouble(enterField.getText().toString());
                 String firstUnit = spinnerTemp2.getSelectedItem().toString();
                 String secondUnit = spinnerTemp1.getSelectedItem().toString();
+                //double firstNum = Double.parseDouble(firstUnit);
+                //double secondNum = Double.parseDouble(secondUnit);
 
                 if (firstUnit.equals("F")) {
                     if (secondUnit.equals("C")) {
-
+                        resultField.setText(Double.toString((value-32) * (5/9)));
                     }
                     else if (secondUnit.equals("K")) {
-
+                        resultField.setText(Double.toString((value-32) * (5/9) + 273.15));
                     }
                     else {
                         resultField.setText(Double.toString(value));
@@ -77,10 +79,10 @@ public class TempActivity extends AppCompatActivity {
                 }
                 else if (firstUnit.equals("C")) {
                     if (secondUnit.equals("F")) {
-
+                        resultField.setText(Double.toString((value*(9/5)) +32 ));
                     }
                     else if (secondUnit.equals("K")) {
-
+                        resultField.setText(Double.toString(value + 273 ));
                     }
                     else {
                         resultField.setText(Double.toString(value));
@@ -88,10 +90,10 @@ public class TempActivity extends AppCompatActivity {
                 }
                 else {
                     if (secondUnit.equals("F")) {
-
+                        resultField.setText(Double.toString((value-273.15) * (9/5) + 32 ));
                     }
                     else if (secondUnit.equals("C")) {
-
+                        resultField.setText(Double.toString(value - 273.15 ));
                     }
                     else {
                         resultField.setText(Double.toString(value));
