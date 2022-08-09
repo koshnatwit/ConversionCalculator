@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,6 +50,16 @@ public class TempActivity extends AppCompatActivity {
             }
         });
 
+        ImageButton switchUnit = (ImageButton) findViewById(R.id.imageButtonSwitch) ;
+        switchUnit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int spinner1Index = spinnerTemp1.getSelectedItemPosition();
+                spinnerTemp1.setSelection(spinnerTemp2.getSelectedItemPosition());
+                spinnerTemp2.setSelection(spinner1Index);
+            }
+        });
+
         DecimalFormat decimalFormat = new DecimalFormat("0.0000");
 
         Button submit = (Button) findViewById(R.id.submit);
@@ -63,15 +74,13 @@ public class TempActivity extends AppCompatActivity {
                 double value = Double.parseDouble(enterField.getText().toString());
                 String firstUnit = spinnerTemp2.getSelectedItem().toString();
                 String secondUnit = spinnerTemp1.getSelectedItem().toString();
-                //double firstNum = Double.parseDouble(firstUnit);
-                //double secondNum = Double.parseDouble(secondUnit);
 
                 if (firstUnit.equals("F")) {
                     if (secondUnit.equals("C")) {
-                        resultField.setText(Double.toString((value-32) * (5/9)));
+                        resultField.setText(decimalFormat.format((value - 32) * (5.0/9.0)));
                     }
                     else if (secondUnit.equals("K")) {
-                        resultField.setText(Double.toString((value-32) * (5/9) + 273.15));
+                        resultField.setText(decimalFormat.format((value - 32) * (5.0/9.0) + 273.15));
                     }
                     else {
                         resultField.setText(Double.toString(value));
@@ -79,10 +88,10 @@ public class TempActivity extends AppCompatActivity {
                 }
                 else if (firstUnit.equals("C")) {
                     if (secondUnit.equals("F")) {
-                        resultField.setText(Double.toString((value*(9/5)) +32 ));
+                        resultField.setText(decimalFormat.format((value*(9.0/5.0)) + 32 ));
                     }
                     else if (secondUnit.equals("K")) {
-                        resultField.setText(Double.toString(value + 273 ));
+                        resultField.setText(decimalFormat.format(value + 273 ));
                     }
                     else {
                         resultField.setText(Double.toString(value));
@@ -90,10 +99,10 @@ public class TempActivity extends AppCompatActivity {
                 }
                 else {
                     if (secondUnit.equals("F")) {
-                        resultField.setText(Double.toString((value-273.15) * (9/5) + 32 ));
+                        resultField.setText(decimalFormat.format((value - 273.15) * (9.0/5.0) + 32 ));
                     }
                     else if (secondUnit.equals("C")) {
-                        resultField.setText(Double.toString(value - 273.15 ));
+                        resultField.setText(decimalFormat.format(value - 273.15 ));
                     }
                     else {
                         resultField.setText(Double.toString(value));
